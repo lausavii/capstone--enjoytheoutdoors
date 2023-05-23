@@ -1,3 +1,5 @@
+"use strict";
+
 const nationalParksArray = [
     {
     LocationID: "ABLI",

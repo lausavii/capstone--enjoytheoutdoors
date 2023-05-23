@@ -1,3 +1,5 @@
+"use strict";
+
 const mountainsArray = [
     {
         name: "Mt. Washington",
