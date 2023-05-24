@@ -70,7 +70,8 @@
   h3{
     text-align: center;
   }
-.fta-list li {
-   display: inline;
-   text-align: center;
-}
+
+  
+  .to-do-list {
+    text-align: center;
+  }
