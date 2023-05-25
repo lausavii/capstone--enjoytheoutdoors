@@ -1,5 +1,3 @@
-
-
 const locationsArray = [
     "Alabama",
     "Alaska",
