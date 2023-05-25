@@ -1,5 +1,6 @@
 window.onload = main;
 
+
 function main() {
   populateStateDropdown();
   populateParktypeDropdown();
@@ -8,6 +9,8 @@ function main() {
   const selectTypeElement = document.querySelector("#parkType");
   selectTypeElement.onchange = parkLocalDesc;
 }
+
+//populate dropdowns
 
 function populateStateDropdown() {
   const selectLocationElement = document.querySelector("#parkLocation");
@@ -29,12 +32,15 @@ function populateParktypeDropdown() {
   }
 }
 
+//function to run states & location
+
 function parkStateLocation(changeEvent) {
   const parkCardsContainer = document.querySelector("#parkCards");
   const currState = changeEvent.target.value;
-  const matchedState = filterData(currState);
+  const matchedState = filterStateData(currState);
   console.log(currState);
 
+  
   parkCardsContainer.innerHTML = "";
 
   matchedState.forEach((element) => {
@@ -42,27 +48,40 @@ function parkStateLocation(changeEvent) {
     parkCardsContainer.appendChild(parkCard);
   });
 }
+
+//filter to run states & location
+
+function filterStateData(currState) {
+  const parkStateLocation = nationalParksArray.filter((parkItem) => parkItem.State === currState);
+    
+  
+  return parkStateLocation;
+}
+
+//function to run park type & description
 
 function parkLocalDesc(changeEvent) {
   const parkCardsContainer = document.querySelector("#parkCards");
   const currLocal = changeEvent.target.value;
-  const matchedState = filterData(currLocal);
+  const matchedParks = filterParkData(currLocal);
   console.log(currLocal);
 
   parkCardsContainer.innerHTML = "";
 
-  matchedState.forEach((element) => {
-    const parkCard = createParkCard(element);
+  matchedParks.forEach((parkItem) => {
+    const parkCard = createParkCard(parkItem);
     parkCardsContainer.appendChild(parkCard);
   });
 }
 
-function filterData(state) {
-  const parkLocalDesc = nationalParksArray.filter((parkItem) =>
-    parkItem.LocationName.includes(state)
+//filter for park types & description
+
+function filterParkData(currLocal) {
+  const selectedParks = nationalParksArray.filter((parkItem) =>parkItem.LocationName.includes(currLocal)
   );
-  return parkLocalDesc;
+  return selectedParks;
 }
+
 
 function createParkCard(park) {
   const parkCard = document.createElement("div");
