@@ -21,7 +21,7 @@
     <script defer src="scripts/locationData.js"></script>
     <script defer src="scripts/parkTypeData.js"></script>
     <script defer src="scripts/nationalParkData.js"></script>
-    <script defer src="park.js"></script>
+    <script defer src="nationalpark.js"></script>
 
   </head>
   <body>
@@ -57,17 +57,15 @@
     </nav>
   </nav>
     <h1>Find a Park by Type & Location </h1>
-    <select name="parkType" id="parkType">
-      <option value="">Choose a Park Type</option>
-    </select>
-
-    
-    <select name="parkLocation" id="parkLocation">
-      <option value="">Choose a Location </option>
-    </select>
-    
-    <main></main>
-
+    <div class="container">
+      <div id="parkCards" class="row"></div>
+      <hr>
+      <label for="parkLocation">Select Location:</label>
+      <select id="parkLocation"></select>
+      <br>
+      <label for="parkType">Select Park Type:</label>
+      <select id="parkType"></select>
+    </div>
 </header>
 
   </body>
