@@ -16,6 +16,9 @@ function populateMountainDropdown() {
   }
 }
 
+//run mountain info
+
+
 function mountainChoice() {
   const parkCardsContainer = document.querySelector("#parkCards");
   const selectElement = document.querySelector("#mountainChoice");
@@ -30,6 +33,8 @@ function mountainChoice() {
     }
   }
 }
+
+
 
 function createParkCard(mountain) {
   const parkCard = document.createElement("div");
