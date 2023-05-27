@@ -133,17 +133,8 @@ p{
     
   }  
 
-
-  .footer-listsection {
-    background-color: #DBFAB4;
-
-  }  
-
-  .footer-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3rem;
-    width: 15rem;
-  }  
-
+  .text-uppercase {
+    font-family: 'Albert Sans', sans-serif;
+    font-weight:bolder;
+    text-align: center;
+  }

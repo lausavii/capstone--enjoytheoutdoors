@@ -39,6 +39,11 @@ h1{
 
 }
 
+.btn{
+    border-radius: 50%;
+  }
+
+
 .card-title {
    font-family: 'Delicious Handrawn', cursive;
     text-align: center;
@@ -58,3 +63,12 @@ footer {
     font-family: 'Albert Sans', sans-serif;
 
 }
+strong {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 100%;
+}
+
+.text-uppercase {
+    font-weight:bold;
+    text-align: center;
+  }

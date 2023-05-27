@@ -69,7 +69,7 @@ function createParkCard(park) {
   console.log("Creating park card:", park)
   
   const parkCard = document.createElement("div");
-  parkCard.classList.add("col-lg-4", "col-md-6", "mb-4");
+  parkCard.classList.add("col-lg-4", "col-md-6", "mx-auto", "mb-4");
 
   const card = document.createElement("div");
   card.classList.add("card");
