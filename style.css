@@ -1,135 +1,107 @@
+@media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+
+
+.caption{
+  width: 50%;
+  position:relative;
+}
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+
+
+  .caption{
+    padding: 13% 7% 10% 7%;
+    margin-right: 25%;
+  }
+
+  
+}
+
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 740px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+ 
+  .caption{
+    padding: 13% 7% 10% 7%;
+    margin-right: 25%;
+  }
+
+
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+ .caption{
+  width: 75%;
+ }
+}
+
+.container-fluid {
+  display: contents;
+}
+
+.container {
+  display: contents;
+}
+
 p{
   font-family: 'Albert Sans', sans-serif;
   text-align: center;
 
+}  
+
+.btn {
+  border-radius: 50%;
 }
-
-
-
-/* Styles for large screens */
-@media screen and (min-width: 1200px) {
- 
-  .to-do-list {
-    width: 90%;
-  }
-
-  .brief-description {
-    
-    width: 90%;
-  }
-
-}
-
-/* Styles for medium screens */
-@media screen and (max-width: 1199px) {
-
-  .carousel{
-    width: 110%;
-  }
-  .to-do-list {
-    width: 110%;
-  }
-
-  .brief-description {
-    width: 110%;
-  }
-  .container-fluid {
-    width: 100%;
-    }
-
-}
-
-/* Styles for small screens */
-@media screen and (max-width: 767px) {
-
-  .carousel {
-    width: 100%;
-    display: flex;
-  
-  }
-
-  .brief-description {
-    width: 100%;
-    position: relative;
-
-  }
-
-  .descr-title, .descr-body{
-    position: relative;
-    margin-top:0%;
-  }
-
-  .things-to-do {
-   width: 140%;
-   position:relative;
-  }
-
-  .container-fluid {
-    width: 100%;
-  }
-
-  h1{
-    position: absolute;
-  }
-
-}
-
 
 .logo {
     width: 10rem;
 
-}
+}    
 .carousel {
     margin-bottom: 5%;
     display: flex;
-}
+}    
 
 .carousel-item {
     height: 40rem;
-}
+}    
 
 .brief-description {
   margin-top: auto;
-}
-
-.container-fluid{
-  margin-bottom: 2rem;
-}
+}  
 
 .navbar {
     background-color: #DBFAB4;
-}
+}    
 
 .navbar-brand {
-    margin-right: 10%;
-    margin-left: 5%;
-    font-size: 35px;
+    text-align: center;
+    font-size: 3rem;
     font-family: 'Satisfy', cursive;
-}
+}    
 
 .nav-item {
-    margin-right: 10%;
-    margin-left: 10%;
+   
     text-align:center;
     
 
-}
+}    
 
 .fta-list  {
   font-family: 'Albert Sans', sans-serif;
   text-align: center;
   list-style: none;
-}
+}  
 
 .caption {
   font-family: 'Albert Sans', sans-serif;
   font-size: 25px;
-}
+}  
 
 .caption:before {
     content: attr(title);
     display: block;
-  }
+  }  
 
 
 
@@ -138,12 +110,12 @@ p{
     margin-top: 5%;
     margin-bottom: 5%;
     font-family: 'Satisfy', cursive;
-  }
+  }  
 
  .to-do-list {
     text-align: center;
     padding: 0;
-  }
+  }  
   
   .caption {
     width: 25%;
@@ -151,7 +123,7 @@ p{
     vertical-align: top;
     display: inline-block;
     font-family: 'Delicious Handrawn', cursive;
-  }
+  }  
   
   .caption img {
     width: 10rem;
@@ -159,13 +131,13 @@ p{
     display: inline-flex;
     margin-bottom: 10%;
     
-  }
+  }  
 
 
   .footer-listsection {
     background-color: #DBFAB4;
 
-  }
+  }  
 
   .footer-logo {
     display: block;
@@ -173,8 +145,5 @@ p{
     margin-right: auto;
     margin-bottom: 3rem;
     width: 15rem;
-  }
+  }  
 
-
-  
-  

@@ -1,0 +1,60 @@
+.container-fluid {
+    display: contents;
+}
+
+.container {
+    display: contents;
+}
+
+.navbar {
+    background-color: #DBFAB4;
+}    
+
+.navbar-brand {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Satisfy', cursive;
+}    
+
+.nav-item {
+    
+    text-align:center; 
+    
+}  
+
+.nav-link {
+    font-family: 'Albert Sans', sans-serif;
+}
+
+.logo {
+    width: 10rem;
+}
+
+select {
+    font-family: 'Albert Sans', sans-serif;
+}
+
+h1{
+    font-family: 'Satisfy', cursive;
+
+}
+
+.card-title {
+   font-family: 'Delicious Handrawn', cursive;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.card-text {
+    font-family: 'Albert Sans', sans-serif;
+}
+
+strong {
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 125%;
+}
+
+footer {
+    font-family: 'Albert Sans', sans-serif;
+
+}

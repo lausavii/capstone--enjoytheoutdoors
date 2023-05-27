@@ -11,37 +11,40 @@ function populateMountainDropdown() {
   for (const mountain of mountainsArray) {
     const option = document.createElement("option");
     option.value = mountain.name;
-    option.innerText = mountain.name; // Fixed typo: changed 'mountains' to 'mountain'
+    option.innerText = mountain.name; 
     selectElement.appendChild(option);
   }
 }
 
 //run mountain info
 
+function mountainChoice(event) {
+  
 
-function mountainChoice() {
-  const parkCardsContainer = document.querySelector("#parkCards");
+  const mountainCardsContainer = document.querySelector("#parkCards");
   const selectElement = document.querySelector("#mountainChoice");
   const selectedMountain = selectElement.value;
 
-  parkCardsContainer.innerHTML = "";
+  console.log("Selected Mountain:", selectedMountain)
+
+  mountainCardsContainer.innerHTML = "";
 
   for (const mountain of mountainsArray) {
     if (selectedMountain === mountain.name) {
-      const parkCard = createParkCard(mountain);
-      parkCardsContainer.appendChild(parkCard);
+      const mountainCard = createMountainsCard(mountain);
+      mountainCardsContainer.appendChild(mountainCard);
     }
   }
 }
 
+function createMountainsCard(mountain) {
+  console.log("Creating mountain card:", mountain)
 
-
-function createParkCard(mountain) {
-  const parkCard = document.createElement("div");
-  parkCard.classList.add("col");
+  const mountainCard = document.createElement("div");
+  mountainCard.classList.add("col-lg-4", "col-md-6", "mx-auto", "mb-4");
 
   const card = document.createElement("div");
-  card.classList.add("card", "h-100");
+  card.classList.add("card");
 
   const img = document.createElement("img");
   img.classList.add("card-img-top");
@@ -72,7 +75,7 @@ function createParkCard(mountain) {
   cardBody.appendChild(coordsText);
 
   card.appendChild(cardBody);
-  parkCard.appendChild(card);
+  mountainCard.appendChild(card);
 
-  return parkCard;
+  return mountainCard;
 }

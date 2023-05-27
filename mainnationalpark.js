@@ -5,12 +5,12 @@ function main() {
   populateStateDropdown();
   populateParktypeDropdown();
   const selectLocationElement = document.querySelector("#parkLocation");
-  selectLocationElement.onchange = parkStateLocation;
+  selectLocationElement.onchange = parkFilter;
   const selectTypeElement = document.querySelector("#parkType");
-  selectTypeElement.onchange = parkLocalDesc;
+  selectTypeElement.onchange = parkFilter;
 }
 
-//populate dropdowns
+// populate dropdowns
 
 function populateStateDropdown() {
   const selectLocationElement = document.querySelector("#parkLocation");
@@ -32,39 +32,17 @@ function populateParktypeDropdown() {
   }
 }
 
-//function to run states & location
+// function to match state & park type
 
-function parkStateLocation(changeEvent) {
+function parkFilter() {
   const parkCardsContainer = document.querySelector("#parkCards");
-  const currState = changeEvent.target.value;
-  const matchedState = filterStateData(currState);
-  console.log(currState);
+  const selectedState = document.querySelector("#parkLocation").value;
+  const selectedType = document.querySelector("#parkType").value;
 
+  console.log("Selected State:", selectedState);
+  console.log("Selected Type:", selectedType);
   
-  parkCardsContainer.innerHTML = "";
-
-  matchedState.forEach((element) => {
-    const parkCard = createParkCard(element);
-    parkCardsContainer.appendChild(parkCard);
-  });
-}
-
-//filter to run states & location
-
-function filterStateData(currState) {
-  const parkStateLocation = nationalParksArray.filter((parkItem) => parkItem.State === currState);
-    
-  
-  return parkStateLocation;
-}
-
-//function to run park type & description
-
-function parkLocalDesc(changeEvent) {
-  const parkCardsContainer = document.querySelector("#parkCards");
-  const currLocal = changeEvent.target.value;
-  const matchedParks = filterParkData(currLocal);
-  console.log(currLocal);
+  const matchedParks = filterParkData(selectedState, selectedType);
 
   parkCardsContainer.innerHTML = "";
 
@@ -74,16 +52,22 @@ function parkLocalDesc(changeEvent) {
   });
 }
 
-//filter for park types & description
+// filter parks based on park type and state
 
-function filterParkData(currLocal) {
-  const selectedParks = nationalParksArray.filter((parkItem) =>parkItem.LocationName.includes(currLocal)
+function filterParkData(selectedState, selectedType) {
+  const matchedParks = nationalParksArray.filter(
+    (parkItem) =>
+      parkItem.State === selectedState &&
+      parkItem.LocationName.includes(selectedType)
   );
-  return selectedParks;
+  return matchedParks;
 }
 
 
 function createParkCard(park) {
+
+  console.log("Creating park card:", park)
+  
   const parkCard = document.createElement("div");
   parkCard.classList.add("col-lg-4", "col-md-6", "mb-4");
 
@@ -107,6 +91,18 @@ function createParkCard(park) {
   localCity.classList.add("card-text");
   localCity.innerText = park.City;
   cardBody.appendChild(localCity);
+
+  const localState = document.createElement("p");
+  localState.classList.add("card-text");
+  localState.innerText = park.State; 
+  cardBody.appendChild(localState);
+
+  const localZipCode = document.createElement("p");
+  localZipCode.classList.add("card-text");
+  localZipCode.innerText = park.ZipCode; 
+  cardBody.appendChild(localZipCode);
+
+
 
   card.appendChild(cardBody);
   parkCard.appendChild(card);
