@@ -80,5 +80,5 @@ strong {
 
   #parkCards, .background {
     background-image: url(images/pexels-eberhard-grossgasteiger-443446.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
   }
