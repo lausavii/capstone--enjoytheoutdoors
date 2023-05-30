@@ -1,9 +1,5 @@
 .container-fluid {
-    display: contents;
-}
-
-.container {
-    display: contents;
+    display:contents;
 }
 
 .navbar {
@@ -12,7 +8,7 @@
 
 .navbar-brand {
     text-align: center;
-    font-size: 3rem;
+    font-size: 175%;
     font-family: 'Satisfy', cursive;
 }    
 
