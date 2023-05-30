@@ -36,7 +36,16 @@ select {
 
 h1{
     font-family: 'Satisfy', cursive;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: right;
 
+
+}
+
+label {
+    color:whitesmoke;
+    font-weight: bold;
 }
 
 .btn{
@@ -72,3 +81,11 @@ strong {
     font-weight:bold;
     text-align: center;
   }
+
+  #parkCards, .background {
+    background-image: url(images/pexels-aaron-buitenwerf-1293423.jpg);
+    background-repeat: no-repeat;
+  }
+
+  
+  

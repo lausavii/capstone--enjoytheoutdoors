@@ -36,8 +36,19 @@ select {
 
 h1{
     font-family: 'Satisfy', cursive;
+    color: chocolate;
+    font-weight: bold;
+    text-align:right;
+}
+
+
+.label-decoration {
+    color: whitesmoke;
+    font-weight: bold;
+    background-color: chocolate;
 
 }
+
 
 .card-title {
    font-family: 'Delicious Handrawn', cursive;
@@ -65,4 +76,9 @@ strong {
 
   footer {
     font-family: 'Albert Sans', sans-serif;
+  }
+
+  #parkCards, .background {
+    background-image: url(images/pexels-eberhard-grossgasteiger-443446.jpg);
+    background-repeat: no-repeat;
   }
